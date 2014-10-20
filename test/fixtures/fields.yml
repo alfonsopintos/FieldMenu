@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  client_id: 
+  max_people: MyString
+  price: MyString
+
+two:
+  client_id: 
+  max_people: MyString
+  price: MyString
