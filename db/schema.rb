@@ -11,13 +11,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141020164346) do
+ActiveRecord::Schema.define(version: 20141020165643) do
 
   create_table "clients", force: true do |t|
     t.string   "name"
     t.string   "address"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "phone_number"
   end
 
   create_table "fields", force: true do |t|
@@ -29,6 +30,16 @@ ActiveRecord::Schema.define(version: 20141020164346) do
   end
 
   add_index "fields", ["client_id"], name: "index_fields_on_client_id"
+
+  create_table "reservations", force: true do |t|
+    t.string   "start_time"
+    t.string   "end_time"
+    t.integer  "field_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "reservations", ["field_id"], name: "index_reservations_on_field_id"
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false
