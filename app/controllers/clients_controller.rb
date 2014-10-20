@@ -11,6 +11,7 @@ class ClientsController < ApplicationController
   # GET /clients/1.json
   def show
     @field = Field.new
+    @fields = Field.all
   end
 
   # GET /clients/new

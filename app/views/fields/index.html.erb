@@ -13,7 +13,7 @@
   <tbody>
     <% @fields.each do |field| %>
       <tr>
-        <td><%= field.client %></td>
+        <td><%= field.client.name %></td>
         <td><%= field.max_people %></td>
         <td><%= field.price %></td>
         <td><%= link_to 'Show', field %></td>
