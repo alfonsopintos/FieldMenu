@@ -1,10 +1,10 @@
-<%= form_for(@reservation) do |f| %>
-  <% if @reservation.errors.any? %>
+<%= form_for(@slot) do |f| %>
+  <% if @slot.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@reservation.errors.count, "error") %> prohibited this reservation from being saved:</h2>
+      <h2><%= pluralize(@slot.errors.count, "error") %> prohibited this slot from being saved:</h2>
 
       <ul>
-      <% @reservation.errors.full_messages.each do |message| %>
+      <% @slot.errors.full_messages.each do |message| %>
         <li><%= message %></li>
       <% end %>
       </ul>

@@ -1,6 +1,6 @@
-class CreateReservations < ActiveRecord::Migration
+class CreateSlots < ActiveRecord::Migration
   def change
-    create_table :reservations do |t|
+    create_table :slots do |t|
       t.string :start_time
       t.string :end_time
       t.references :field, index: true
