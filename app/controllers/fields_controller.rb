@@ -10,6 +10,7 @@ class FieldsController < ApplicationController
   # GET /fields/1
   # GET /fields/1.json
   def show
+    @slots = Slot.all
   end
 
   # GET /fields/new
