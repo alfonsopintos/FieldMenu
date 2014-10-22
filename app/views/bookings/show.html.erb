@@ -1,5 +1,3 @@
-<p id="notice"><%= notice %></p>
-
 <p>
   <strong>Name:</strong>
   <%= @booking.name %>
@@ -17,12 +15,12 @@
 
 <p>
   <strong>User:</strong>
-  <%= @booking.user %>
+  <%= @booking.user.email %>
 </p>
 
 <p>
-  <strong>Slot:</strong>
-  <%= @booking.slot %>
+  <strong>Time:</strong>
+  <%= @booking.slot.start_time %> - <%= @booking.slot.end_time %>
 </p>
 
 <%= link_to 'Edit', edit_booking_path(@booking) %> |

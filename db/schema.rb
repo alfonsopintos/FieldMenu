@@ -11,7 +11,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141021215527) do
+ActiveRecord::Schema.define(version: 20141022032822) do
+
+  create_table "bookings", force: true do |t|
+    t.string   "name"
+    t.string   "email"
+    t.string   "phone"
+    t.integer  "user_id"
+    t.integer  "slot_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "bookings", ["slot_id"], name: "index_bookings_on_slot_id"
+  add_index "bookings", ["user_id"], name: "index_bookings_on_user_id"
 
   create_table "clients", force: true do |t|
     t.string   "name"
