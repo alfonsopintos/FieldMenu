@@ -4,7 +4,10 @@
 
       <% @clients.each do |client| %>
         <div class="col-md-4">
-          <%= link_to "#{client.name}", client %>
+          <h3><%= "#{client.name}"%></h3>
+          <%= link_to client do %>
+            <%= image_tag client.avatar.url(:medium) %>
+          <% end %>
         </div>
       <% end %>
 
