@@ -1,17 +1,8 @@
-<p>
-  <strong>Name:</strong>
-  <%= @client.name %>
-</p>
+<p> <%= @client.name %> </p>
 
-<p>
-  <strong>Address:</strong>
-  <%= @client.address %>
-</p>
+<p> <%= @client.address %> </p>
 
-<p>
-  <strong>Phone Number:</strong>
-  <%= @client.phone_number %>
-</p>
+<p> <%= @client.phone_number %> </p>
 
 <p>
   <strong>Hour of Operation:</strong>
@@ -21,6 +12,8 @@
 
 <%= link_to 'Edit', edit_client_path(@client) %> |
 <%= link_to 'Back', clients_path %>
+<hr>
+<%= image_tag @client.avatar.url(:medium) %>
 <hr>
 
 <h2> Fields </h2>

@@ -4,9 +4,7 @@
 
       <% @clients.each do |client| %>
         <div class="col-md-4">
-          <a href= '/pages/fields' >
-          <h4><%= client.name %></h4>
-          </a>
+          <%= link_to "#{client.name}", client %>
         </div>
       <% end %>
 

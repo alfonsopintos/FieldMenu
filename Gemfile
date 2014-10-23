@@ -42,3 +42,5 @@ gem 'devise'
 
 gem "twitter-bootstrap-rails"
 
+gem "paperclip", "~> 4.2"
+
