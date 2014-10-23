@@ -8,4 +8,8 @@ class PagesController < ApplicationController
     @fields = Field.all
   end
 
+  def info
+
+  end
+
 end

@@ -2,27 +2,18 @@
   <div class="center">
     <div class="row">
 
-      <div class="col-md-4">
-        <a href="/clients/2"> 
-          <h4> Midtown Indoor Soccer </h4>
-          <%= image_tag 'midtown.jpg', height: '200px' %>
-        </a>
-      </div>
-
-      <div class="col-md-4">
-        <a href="/clients/3">
-        <h4>WynWood Soccer</h4>
-        <%= image_tag 'wynwood.jpg', height: '200px' %>
-        </a>
-      </div>
-
-      <div class="col-md-4">
-        <a href="/clients/4">
-        <h4>Soccer Town</h4>
-        <%= image_tag 'soccertown.jpg', height: '200px' %>
-        </a>
-      </div>
+      <% @clients.each do |client| %>
+        <div class="col-md-4">
+          <a href= '/pages/fields' >
+          <h4><%= client.name %></h4>
+          </a>
+        </div>
+      <% end %>
 
     </div>
   </div>
 </div>
+
+
+
+

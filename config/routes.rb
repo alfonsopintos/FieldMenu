@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   root 'pages#landing'
 
   get 'pages/fields'
+  get 'pages/info'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
