@@ -1,12 +1,13 @@
+<h2 class="text-center"> All Available Fields </h2>
 <div class="logo_sections">
   <div class="center">
     <div class="row">
 
       <% @fields.each do |field| %>
         <div class="col-md-4">
-          <a href= '/pages/info' >
-          <h4><%= field.max_people %></h4>
-          </a>
+          <%= link_to field do %>
+            <%= image_tag field.avatar.url(:medium) %>
+          <% end %>
         </div>
       <% end %>
 

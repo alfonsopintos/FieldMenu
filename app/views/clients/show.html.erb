@@ -20,21 +20,19 @@
 <%= link_to 'Back', clients_path %>
 
 
-<h2 class="text-center"> Available Fields </h2>
+<h2 class="text-center"> Book a Field </h2>
 <div class="logo_sections">
   <div class="center">
     <div class="row">
-
       <% @fields.each do |field| %>
-        <div class="col-md-4">
-          <% if field.client_id == @client.id %>
-            <%= link_to field do %>
-              <%= image_tag field.avatar.url(:medium) %>
-            <% end %>
-          <% end %>
-        </div>
+        <% if field.client_id == @client.id %>
+          <div class="col-md-4">
+              <%= link_to field do %>
+                <%= image_tag field.avatar.url(:medium) %>
+              <% end %>
+          </div>
+        <% end %>
       <% end %>
-
     </div>
   </div>
 </div>
