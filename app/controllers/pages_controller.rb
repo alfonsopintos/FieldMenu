@@ -4,4 +4,8 @@ class PagesController < ApplicationController
     @clients = Client.all
   end
 
+  def fields
+    @fields = Field.all
+  end
+
 end
