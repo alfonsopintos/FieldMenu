@@ -12,7 +12,8 @@
   <% end %>
 
   <div class="field">
-    <%= f.hidden_field :client_id, value: @client.id %>
+    <%= f.label :client_id %><br>
+    <%= f.text_field :client_id%>
   </div>
   <div class="field">
     <%= f.label :max_people %><br>

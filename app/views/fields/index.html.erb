@@ -25,5 +25,6 @@
 </table>
 
 <br>
-
-<%= link_to 'New Field', new_field_path %>
+<% if user_signed_in? %>
+  <%= link_to 'New Field', new_field_path %>
+<% end %>
