@@ -71,6 +71,6 @@ class FieldsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def field_params
-      params.require(:field).permit(:client_id, :max_people, :price)
+      params.require(:field).permit(:client_id, :max_people, :price, :avatar)
     end
 end

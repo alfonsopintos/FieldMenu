@@ -13,6 +13,10 @@
   <%= @field.price %>
 </p>
 
+<hr>
+<%= image_tag @field.avatar.url(:medium) %>
+<hr>
+
 <%= link_to 'Edit', edit_field_path(@field) %> |
 <%= link_to 'Back', fields_path %>
 
