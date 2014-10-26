@@ -1,13 +1,13 @@
 <div class="logo_sections">
-  <div class="center">
+  <div class="container">
     <div class="row">
 
       <% @clients.each do |client| %>
         <div class="col-md-4">
-          <h3><%= "#{client.name}"%></h3>
           <%= link_to client do %>
             <%= image_tag client.avatar.url(:medium) %>
           <% end %>
+          <h3><%= "#{client.name}"%></h3>
         </div>
       <% end %>
 
