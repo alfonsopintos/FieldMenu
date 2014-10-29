@@ -5,7 +5,7 @@ class PagesController < ApplicationController
     @fields = Field.all
   end
 
-  def fields
+  def client_show
     @fields = Field.all
   end
 
