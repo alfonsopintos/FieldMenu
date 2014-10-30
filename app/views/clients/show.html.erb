@@ -1,8 +1,7 @@
 <!-- Grid system for info and client gallery -->
 <div class="logo_sections">
-  <div class="center">
+  <div class="container">
     <div class="row">
-
       <div class="col-md-6">
         <p> <%= @client.name %> </p>
         <p> <%= @client.address %> </p>
@@ -14,27 +13,23 @@
           <%= link_to 'Edit', edit_client_path(@client) %> |
           <%= link_to 'Back', clients_path %>
       </div>
-
       <div class="col-md-6">
-        <%= image_tag @client.avatar.url(:medium) %>
+        <%= image_tag @client.avatar.url(:large) %>
       </div>
-
     </div>
   </div>
 </div>
-
-
-
-
-
 <hr>
 <!-- End of client grid -->
 
 
 <!-- Grid system for client fields -->
-<h2 class="text-center"> Book a Field </h2>
+<div class="text-center">
+  <h2> Book a Field </h2>
+  <p> (Click on image for info) </p>
+</div>
 <div class="logo_sections">
-  <div class="center">
+  <div class="container">
     <div class="row">
       <% @fields.each do |field| %>
         <% if field.client_id == @client.id %>
