@@ -3,16 +3,19 @@
   <div class="container">
     <div class="row">
       <div class="col-md-6">
-        <p> <%= @client.name %> </p>
-        <p> <%= @client.address %> </p>
-        <p> <%= @client.phone_number %> </p>
-        <p>
-          <strong>Hour of Operation:</strong>
-          <%= @client.open_time %> - <%= @client.close_time %>
-        </p>
-          <%= link_to 'Edit', edit_client_path(@client) %> |
-          <%= link_to 'Back', clients_path %>
+        <div class="text-center">
+          <p> <%= @client.name %> </p>
+          <p> <%= @client.address %> </p>
+          <p> <%= @client.phone_number %> </p>
+          <p>
+            <strong>Open:</strong>
+            <%= @client.open_time %> - <%= @client.close_time %>
+          </p>
+            <%= link_to 'Edit', edit_client_path(@client) %> |
+            <%= link_to 'Back', clients_path %>
+        </div>
       </div>
+
       <div class="col-md-6">
         <%= image_tag @client.avatar.url(:large) %>
       </div>
