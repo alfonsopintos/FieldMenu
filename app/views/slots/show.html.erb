@@ -1,17 +1,30 @@
-<p>
-  <strong>Start time:</strong>
-  <%= @slot.start_time %>
-</p>
+<div class="logo_sections">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="text-center">
+          <h4> Booking Information </h4>
+          <br>
+          <p>
+            <strong>Start time:</strong> <%= @slot.start_time %>
+          </p>
+          <p>
+            <strong>End time:</strong> <%= @slot.end_time %>
+          </p>
+          <p>
+            <strong>Field:</strong> <%= @slot.field.client.name %>
+          </p>
 
-<p>
-  <strong>End time:</strong>
-  <%= @slot.end_time %>
-</p>
-
-<p>
-  <strong>Field:</strong>
-  <%= @slot.field.client.name %>
-</p>
-
-<%= link_to 'Edit', edit_slot_path(@slot) %> |
-<%= link_to 'Back', slots_path %>
+          <%= link_to 'Edit', edit_slot_path(@slot) %> |
+          <%= link_to 'Back', slots_path %>
+        </div>
+      </div>
+    
+      <div class="col-md-6">
+        <h4> Complete Your Booking </h4>
+        <% @booking = Booking.new %>
+        <%= render 'bookings/form' %>
+      </div>      
+    </div>
+  </div>
+</div>

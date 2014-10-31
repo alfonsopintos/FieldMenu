@@ -10,6 +10,7 @@ class SlotsController < ApplicationController
   # GET /slots/1
   # GET /slots/1.json
   def show
+    @bookings = Booking.all
   end
 
   # GET /slots/new

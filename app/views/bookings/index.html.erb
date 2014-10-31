@@ -7,7 +7,6 @@
       <th>Email</th>
       <th>Phone</th>
       <th>User</th>
-      <th>Slot</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -19,7 +18,6 @@
         <td><%= booking.email %></td>
         <td><%= booking.phone %></td>
         <td><%= booking.user.email %></td>
-        <td><%= booking.slot.start_time %> - <%= booking.slot.end_time %></td>
         <td><%= link_to 'Show', booking %></td>
         <td><%= link_to 'Edit', edit_booking_path(booking) %></td>
         <td><%= link_to 'Destroy', booking, method: :delete, data: { confirm: 'Are you sure?' } %></td>

@@ -3,17 +3,19 @@
   <div class="container">
     <div class="row">
       <div class="col-md-6">
-        <p>
-          <strong>Field Location:</strong> <%= @field.client.name %>
-        </p>
-        <p>
-          <strong>Maximum Number of People Allowed:</strong> <%= @field.max_people %>
-        </p>
-        <p>
-          <strong>Price Per Hour:</strong> <%= @field.price %>
-        </p>
-        <%= link_to 'Edit', edit_field_path(@field) %> |
-        <%= link_to 'Back', fields_path %>
+        <div class="text-center">
+          <p>
+            <strong>Where:</strong> <%= @field.client.name %>
+          </p>
+          <p>
+            <strong>Maximum Number of People Allowed:</strong> <%= @field.max_people %>
+          </p>
+          <p>
+            <strong>Price Per Hour:</strong> <%= @field.price %>
+          </p>        
+          <%= link_to 'Edit', edit_field_path(@field) %> |
+          <%= link_to 'Back', fields_path %>
+        </div>
       </div>
       <div class="col-md-6">
         <%= image_tag @field.avatar.url(:medium) %>
@@ -27,26 +29,27 @@
 
 <div class="text-center">
   <h2> Available Bookings </h2>
-  <p> Press 'Book' to begin Booking Process </p>
+  <p> Click on the time slot you wish to book </p>
 </div>
-  <table>
-    <thead>
-      <tr>
-        <th>Start time</th>
-        <th>End time</th>
-        <th colspan="3"></th>
-      </tr>
-    </thead>
 
-    <tbody>
-      <% @slots.each do |slot| %>
-      <% if slot.field_id == @field.id %>
-        <tr>
-          <td><%= slot.start_time %></td>
-          <td><%= slot.end_time %></td>
-          <td><%= link_to 'Show', slot %></td>
-        </tr>
-      <% end %>
-      <% end %>
-    </tbody>
-  </table>
+<!-- Start of Booking Grid -->
+<table align="center" class="table table-hover">
+  <thead>
+    <tr>
+      <th>Start time</th>
+      <th>End time</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @slots.each do |slot| %>
+    <% if slot.field_id == @field.id %>
+    <tr onclick='location.href="<%= slot_path(slot) %>"'>
+      <td><%= slot.start_time %></td>
+      <td><%= slot.end_time %></td> 
+    </tr>
+    <% end %>
+    <% end %>
+  </tbody>
+</table>
+<!-- End of Booking grid -->

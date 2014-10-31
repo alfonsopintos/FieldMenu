@@ -13,23 +13,21 @@
 
   <div class="field">
     <%= f.label :name %><br>
-    <%= f.text_field :name %>
+    <%= f.text_field :name, value: current_user.first_name %>
   </div>
   <div class="field">
     <%= f.label :email %><br>
-    <%= f.text_field :email %>
+    <%= f.text_field :email, value: current_user.email %>
   </div>
   <div class="field">
     <%= f.label :phone %><br>
     <%= f.text_field :phone %>
   </div>
   <div class="field">
-    <%= f.label :user_id %><br>
-    <%= f.text_field :user_id %>
+    <%= f.hidden_field :user_id, value: current_user.id %>
   </div>
   <div class="field">
-    <%= f.label :slot_id %><br>
-    <%= f.text_field :slot_id %>
+    <%= f.hidden_field :slot_id, value: @slot.field_id %>
   </div>
   <div class="actions">
     <%= f.submit %>

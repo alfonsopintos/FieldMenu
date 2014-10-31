@@ -1,27 +1,24 @@
-<p>
-  <strong>Name:</strong>
-  <%= @booking.name %>
-</p>
+ <div class="text-center"> 
+  <h1> Your Booking has been cofirmed </h1>
+  <p>
+    <strong>Name:</strong> <%= @booking.name %>
+  </p>
 
-<p>
-  <strong>Email:</strong>
-  <%= @booking.email %>
-</p>
+  <p>
+    <strong>Email:</strong> <%= @booking.email %>
+  </p>
 
-<p>
-  <strong>Phone:</strong>
-  <%= @booking.phone %>
-</p>
+  <p>
+    <strong>Phone:</strong> <%= @booking.phone %>
+  </p>
 
-<p>
-  <strong>User:</strong>
-  <%= @booking.user.email %>
-</p>
+  <p>
+    <strong>User:</strong> <%= @booking.user.email %>
+  </p>
 
-<p>
-  <strong>Time:</strong>
-  <%= @booking.slot.start_time %> - <%= @booking.slot.end_time %>
-</p>
+  <p>
+  </p>
 
-<%= link_to 'Edit', edit_booking_path(@booking) %> |
-<%= link_to 'Back', bookings_path %>
+  <%= link_to 'Edit', edit_booking_path(@booking) %> |
+  <%= link_to 'Back', bookings_path %>
+</div>
