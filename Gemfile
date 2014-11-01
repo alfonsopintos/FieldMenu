@@ -44,3 +44,6 @@ gem "twitter-bootstrap-rails"
 
 gem "paperclip", "~> 4.2"
 
+gem 'omniauth-facebook'
+
+gem 'twilio-ruby'

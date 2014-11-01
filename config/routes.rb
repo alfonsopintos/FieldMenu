@@ -7,7 +7,7 @@ Rails.application.routes.draw do
 
   resources :clients
 
-  devise_for :users
+  devise_for :users, controllers: {omniauth_callbacks: "omniauth_callbacks"}
 
   root 'pages#landing'
 
