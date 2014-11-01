@@ -43,12 +43,12 @@
   </thead>
   <tbody>
     <% @slots.each do |slot| %>
-    <% if slot.field_id == @field.id %>
-    <tr onclick='location.href="<%= slot_path(slot) %>"'>
-      <td><%= slot.start_time %></td>
-      <td><%= slot.end_time %></td> 
-    </tr>
-    <% end %>
+      <% if slot.field_id == @field.id %>
+        <tr onclick='location.href="<%= slot_path(slot) %>"'>
+          <td><%= slot.start_time %></td>
+          <td><%= slot.end_time %></td> 
+        </tr>
+      <% end %>
     <% end %>
   </tbody>
 </table>
