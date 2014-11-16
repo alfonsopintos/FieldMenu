@@ -43,7 +43,9 @@ gem 'devise', "~> 3.3.0"
 gem "twitter-bootstrap-rails"
 
 gem "paperclip", "~> 4.2"
+gem 'aws-sdk'
 
 gem 'omniauth-facebook'
 
 gem 'twilio-ruby'
+
